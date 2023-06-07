@@ -17,3 +17,4 @@ jobs:
               run: cat /etc/os-release
 
             - run: docker version
+            - run: env
