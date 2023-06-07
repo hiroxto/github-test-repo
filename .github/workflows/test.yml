@@ -19,5 +19,7 @@ jobs:
             - run: docker version
             - run: env
             - run: echo $PATH
-            - name: Show commands
-              run: ls `echo $PATH | tr ':' ' '`
+            -   name: Show commands
+                run: ls `echo $PATH | tr ':' ' '`
+                env:
+                    CI: false
