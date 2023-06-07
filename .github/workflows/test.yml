@@ -20,6 +20,4 @@ jobs:
             - run: env
             - run: echo $PATH
             -   name: Show commands
-                run: ls `echo $PATH | tr ':' ' '`
-                env:
-                    CI: false
+                run: ls `echo $PATH | tr ':' ' '` || true
