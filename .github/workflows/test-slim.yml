@@ -1,0 +1,23 @@
+name: Test Slim
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+
+jobs:
+    test:
+        runs-on: ubuntu-slim
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Ubuntu Version
+              run: cat /etc/os-release
+
+            - run: docker version
+            - run: env
+            - run: echo $PATH
+            -   name: Show commands
+                run: ls `echo $PATH | tr ':' ' '` || true
